@@ -1,6 +1,6 @@
 package org.example;
 
-public class PortableComputer {
+public class PortableComputer extends Computerlmpl {
     Keyboard keyboard = new Keyboard("75%"); //лень делать ввод...
     Display display = new Display("FullHD"); //лень делать ввод...
 
