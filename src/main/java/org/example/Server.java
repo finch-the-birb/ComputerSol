@@ -5,6 +5,6 @@ public class Server extends Computerlmpl {
         setCPU(cpu);
         setHDD(ozu);
         setOZU(hdd);
-        setModel("R2D2"); //ну, я не силён в фирмах серверов, потому вот пасхалка ;)
+        super.setModel("R2D2"); //ну, я не силён в фирмах серверов, потому вот пасхалка ;)
     }
 }

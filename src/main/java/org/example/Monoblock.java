@@ -9,7 +9,7 @@ public class Monoblock extends Computerlmpl {
         setCPU(cpu);
         setHDD(ozu);
         setOZU(hdd);
-        setModel(model);
+        super.setModel(model);
         this.DisplayRes = resolution;
     }
     Display display = new Display(DisplayRes);
@@ -19,11 +19,11 @@ public class Monoblock extends Computerlmpl {
         switch (this.Status) {
             case "Off" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() +
-                                "," + display.getResolution() + "] turning On..."
+                        "Computer " + super.getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " + getOZU() +
+                                "] turning On..."
                 );
                 display.setConnectionDisplay("connected");
-                System.out.println("Display" + display.getConnectionDisplay());
+                System.out.println("Display " + display.getConnectionDisplay());
                 this.Status = "On";
             }
             case "On" -> System.out.println("Already turned On");
@@ -36,11 +36,11 @@ public class Monoblock extends Computerlmpl {
         switch (this.Status) {
             case "On" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() +
-                                "," + display.getResolution() + "] turning Off..."
+                        "Computer " + super.getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " + getOZU() +
+                                "] turning Off..."
                 );
                 display.setConnectionDisplay("disconnected");
-                System.out.println("Display" + display.getConnectionDisplay());
+                System.out.println("Display " + display.getConnectionDisplay());
                 this.Status = "Off";
             }
             case "Off" -> System.out.println("Already turned Off");
@@ -53,15 +53,15 @@ public class Monoblock extends Computerlmpl {
         switch (this.InternetStatus) {
             case "Off" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() +
-                                "," + display.getResolution() + "] connecting..."
+                        "Computer " + super.getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " + getOZU() +
+                                "] connecting..."
                 );
                 this.InternetStatus = "On";
             }
             case "On" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() +
-                                "," + display.getResolution() + "] disconnecting..."
+                        "Computer " + super.getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " + getOZU() +
+                                "] disconnecting..."
                 );
                 this.InternetStatus = "Off";
             }

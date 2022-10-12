@@ -52,7 +52,8 @@ public class Computerlmpl implements Computer {
         switch (this.Status) {
             case "Off" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() + "] turning On..."
+                        "Computer " + getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " +
+                                getOZU() + "] turning On..."
                     );
                 this.Status = "On";
             }
@@ -65,7 +66,8 @@ public class Computerlmpl implements Computer {
         switch (this.Status) {
             case "On" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() + "] turning Off..."
+                        "Computer " + getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " +
+                                getOZU() + "] turning Off..."
                 );
                 this.Status = "Off";
             }
@@ -78,13 +80,15 @@ public class Computerlmpl implements Computer {
         switch (this.InternetStatus) {
             case "Off" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() + "] connecting..."
+                        "Computer " + getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " +
+                                getOZU() + "] connecting..."
                 );
                 this.InternetStatus = "On";
             }
             case "On" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() + "] disconnecting..."
+                        "Computer " + getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " +
+                                getOZU() + "] disconnecting..."
                 );
                 this.InternetStatus = "Off";
             }

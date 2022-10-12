@@ -5,6 +5,6 @@ public class Nettop extends Computerlmpl{
         setCPU(cpu);
         setHDD(ozu);
         setOZU(hdd);
-        setModel(model);
+        super.setModel(model);
     }
 }

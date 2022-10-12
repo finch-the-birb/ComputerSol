@@ -11,7 +11,7 @@ public class Netbook extends PortableComputer {
         setCPU(cpu);
         setHDD(ozu);
         setOZU(hdd);
-        setModel(model);
+        super.setModel(model);
     }
 
     @Override
@@ -19,13 +19,13 @@ public class Netbook extends PortableComputer {
         switch (this.Status) {
             case "Off" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() +
+                        "Computer " + super.getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " + getOZU() +
                                 "] turning On..."
                 );
                 keyboard.setConnectionKeyboard("connected");
-                System.out.println("Keyboard" + keyboard.getConnectionKeyboard());
+                System.out.println("Keyboard " + keyboard.getConnectionKeyboard());
                 display.setConnectionDisplay("connected");
-                System.out.println("Display" + display.getConnectionDisplay());
+                System.out.println("Display " + display.getConnectionDisplay());
                 this.Status = "On";
             }
             case "On" -> System.out.println("Already turned On");
@@ -39,13 +39,13 @@ public class Netbook extends PortableComputer {
         switch (this.Status) {
             case "On" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() +
-                                "," + display.getResolution() + "] turning Off..."
+                        "Computer " + super.getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " + getOZU() +
+                                "] turning Off..."
                 );
                 keyboard.setConnectionKeyboard("disconnected");
-                System.out.println("Keyboard" + keyboard.getConnectionKeyboard());
+                System.out.println("Keyboard " + keyboard.getConnectionKeyboard());
                 display.setConnectionDisplay("disconnected");
-                System.out.println("Display" + display.getConnectionDisplay());
+                System.out.println("Display " + display.getConnectionDisplay());
                 this.Status = "Off";
             }
             case "Off" -> System.out.println("Already turned Off");

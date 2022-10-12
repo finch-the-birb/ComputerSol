@@ -9,7 +9,7 @@ public class Desktop extends Computerlmpl{
         setCPU(cpu);
         setHDD(ozu);
         setOZU(hdd);
-        setModel("Desktop");
+        super.setModel("Desktop");
         this.Videocard = videocard;
     }
 
@@ -26,8 +26,8 @@ public class Desktop extends Computerlmpl{
         switch (this.Status) {
             case "Off" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU()
-                                + "," + getVideocard() + "] turning On..."
+                        "Computer " + super.getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " + getOZU()
+                                + ", " + getVideocard() + "] turning On..."
                 );
                 this.Status = "On";
             }
@@ -41,8 +41,8 @@ public class Desktop extends Computerlmpl{
         switch (this.Status) {
             case "On" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU()
-                                + "," + getVideocard() + "] turning Off..."
+                        "Computer " + super.getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " + getOZU()
+                                + ", " + getVideocard() + "] turning Off..."
                 );
                 this.Status = "Off";
             }
@@ -56,15 +56,15 @@ public class Desktop extends Computerlmpl{
         switch (this.InternetStatus) {
             case "Off" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU()
-                                + "," + getVideocard() + "] connecting..."
+                        "Computer " + super.getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " + getOZU()
+                                + ", " + getVideocard() + "] connecting..."
                 );
                 this.InternetStatus = "On";
             }
             case "On" -> {
                 System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU()
-                                + "," + getVideocard() + "] disconnecting..."
+                        "Computer " + super.getModel() + " [Spec: " + getCPU() + ", " + getHDD() + ", " + getOZU()
+                                + ", " + getVideocard() + "] disconnecting..."
                 );
                 this.InternetStatus = "Off";
             }
