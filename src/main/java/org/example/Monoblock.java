@@ -2,8 +2,8 @@ package org.example;
 
 public class Monoblock extends Computerlmpl {
     private String DisplayRes;
-    private String Status = "Off";
-    private String InternetStatus = "Off";
+    private String Status = getStatus();
+    private String InternetStatus = getInternetStatus();
 
     public Monoblock (String cpu,String ozu,String hdd, String model, String resolution) {
         setCPU(cpu);

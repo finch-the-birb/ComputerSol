@@ -8,6 +8,14 @@ public class Computerlmpl implements Computer {
     private String Status = "Off";
     private String InternetStatus = "Off";
 
+    public String getStatus() {
+        return Status;
+    }
+
+    public String getInternetStatus() {
+        return InternetStatus;
+    }
+
     public String getOZU() {
         return OZU;
     }
