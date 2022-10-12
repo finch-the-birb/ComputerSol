@@ -1,7 +1,7 @@
 package org.example;
 
 public class Keyboard {
-    private String connection;
+    private String connection = "disconnected";
     private String size;
 
     public String getSize() {
@@ -21,7 +21,6 @@ public class Keyboard {
     }
 
     public Keyboard (String size) {
-        setConnectionKeyboard("Display is connected to your device");
         setSize(size);
     }
 }

@@ -1,18 +1,17 @@
 package org.example;
 
-public class Monoblock extends Computerlmpl {
-    private String DisplayRes;
-    private String Status = getStatus();
-    private String InternetStatus = getInternetStatus();
+public class Laptop extends PortableComputer {
+    private String CPU;
+    private String OZU;
+    private String HDD;
+    private String Status = "Off";
 
-    public Monoblock (String cpu,String ozu,String hdd, String model, String resolution) {
+    public Laptop (String cpu,String ozu,String hdd, String model) {
         setCPU(cpu);
         setHDD(ozu);
         setOZU(hdd);
         setModel(model);
-        this.DisplayRes = resolution;
     }
-    Display display = new Display(DisplayRes);
 
     @Override
     public void turnOn() throws IllegalArgumentException {
@@ -20,8 +19,10 @@ public class Monoblock extends Computerlmpl {
             case "Off" -> {
                 System.out.println(
                         "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() +
-                                "," + display.getResolution() + "] turning On..."
+                                "] turning On..."
                 );
+                keyboard.setConnectionKeyboard("connected");
+                System.out.println("Keyboard" + keyboard.getConnectionKeyboard());
                 display.setConnectionDisplay("connected");
                 System.out.println("Display" + display.getConnectionDisplay());
                 this.Status = "On";
@@ -31,6 +32,7 @@ public class Monoblock extends Computerlmpl {
         }
     }
 
+
     @Override
     public void turnOff() throws IllegalArgumentException {
         switch (this.Status) {
@@ -39,32 +41,13 @@ public class Monoblock extends Computerlmpl {
                         "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() +
                                 "," + display.getResolution() + "] turning Off..."
                 );
+                keyboard.setConnectionKeyboard("disconnected");
+                System.out.println("Keyboard" + keyboard.getConnectionKeyboard());
                 display.setConnectionDisplay("disconnected");
                 System.out.println("Display" + display.getConnectionDisplay());
                 this.Status = "Off";
             }
             case "Off" -> System.out.println("Already turned Off");
-            default -> throw new IllegalArgumentException("Maybe this computer is broken...");
-        }
-    }
-
-    @Override
-    public void internetConnect() throws IllegalArgumentException {
-        switch (this.InternetStatus) {
-            case "Off" -> {
-                System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() +
-                                "," + display.getResolution() + "] connecting..."
-                );
-                this.InternetStatus = "On";
-            }
-            case "On" -> {
-                System.out.println(
-                        "Computer" + getModel() + "[Spec:" + getCPU() + "," + getHDD() + "," + getOZU() +
-                                "," + display.getResolution() + "] disconnecting..."
-                );
-                this.InternetStatus = "Off";
-            }
             default -> throw new IllegalArgumentException("Maybe this computer is broken...");
         }
     }

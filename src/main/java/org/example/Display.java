@@ -1,7 +1,7 @@
 package org.example;
 
 public class Display {
-    private String connection;
+    private String connection = "disconnected";
     private String resolution;
 
     public String getResolution () {
@@ -21,7 +21,6 @@ public class Display {
     }
 
     public Display (String resolution) {
-        setConnectionDisplay("Display is connected to your device");
         setResolution(resolution);
     }
 }
