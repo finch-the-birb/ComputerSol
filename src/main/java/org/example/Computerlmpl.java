@@ -44,7 +44,7 @@ public class Computerlmpl implements Computer {
         return Model;
     }
 
-    public void setModel(String name) {
+    public void setModel(String Model) {
         this.Model = Model;
     }
 

@@ -1,6 +1,7 @@
 package org.example;
 
 public class Monoblock extends Computerlmpl {
+    private String Model;
     private String DisplayRes;
     private String Status = getStatus();
     private String InternetStatus = getInternetStatus();

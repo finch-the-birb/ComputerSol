@@ -5,7 +5,7 @@ public class Main {
 
         Computer[] Computer = new Computer[6];
 
-        Laptop laptop = new Laptop("intel i7", "16gb ssd", "250gb", "fujitsu");
+        Laptop laptop = new Laptop("intel i7", "16gb ssd", "250gb", "Fujitsu");
         Server server = new Server("intel i5", "8gb ssd", "300gb");
         Desktop desktop = new Desktop("intel i7", "16gb ssd", "700gb","RTX3050");
         Netbook netbook = new Netbook("intel i7", "8gb ssd", "250gb", "Acer");

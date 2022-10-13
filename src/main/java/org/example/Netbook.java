@@ -2,6 +2,7 @@ package org.example;
 
 
 public class Netbook extends PortableComputer {
+    private String Model;
     private String CPU;
     private String OZU;
     private String HDD;

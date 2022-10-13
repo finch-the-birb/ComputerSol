@@ -1,6 +1,7 @@
 package org.example;
 
 public class Desktop extends Computerlmpl{
+    private String Model;
     private String Videocard;
     private String Status = "Off";
     private String InternetStatus = "Off";
